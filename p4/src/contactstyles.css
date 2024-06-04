@@ -1,0 +1,124 @@
+/********f************
+    
+    Project 4 Styles
+    Name: Noah Yanga
+    Date: December 13, 2023
+    Description: Project 4 Styles
+
+********************/
+body {
+    background-color: tan;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #333;
+    background: linear-gradient(180deg, rgba(55,45,19,1) 0%, rgba(210,180,140,1) 22%, rgba(210,180,140,1) 93%);
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 5%;
+}
+
+#name_error, #email_error {
+    text-align: left;
+    font-size: 10px;
+    color: red;
+    margin-top: -3%;
+}
+
+a {
+    color: #45a049;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+nav a:hover {
+    color:greenyellow;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#top {
+    text-align: center;
+    font-size: 50px;
+}
+
+main {
+    width: 600px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+main p {
+    font-size: 20px;
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #45a049;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#clear {
+    background-color: grey;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2.3px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    main {
+        padding: 10px;
+        width: 400px;
+        height: 450px;
+    }
+
+    main p {
+        font-size: 15px;
+    }
+
+    form {
+        width: 200px;
+    }
+
+    footer {
+        padding: 5px;
+    }
+}
