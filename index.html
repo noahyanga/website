@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah Yanga</title>
+    <title>Noah Yanga | Web Developer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b01461b269.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +16,7 @@
     <div id="home">
         <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
             <div class="container-fluid">
-                <a href="#home" class="navbar-brand">
-                    <img src="logo.png" width="55" height="35" alt="Noah's Logo">
-                </a>
+                <a href="#home" ><i class="fa fa-user-circle" style="font-size: 50px;" ></i></a>
                 <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,7 +24,13 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a href="#projects" class="nav-link">Projects</a>
-                            <a href="mailto:noag29@hotmail.com" class="btn btn-outline-blue">Contact me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#services" class="nav-link">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="mailto:noag29@hotmail.com" class="btn btn-outline-primary">Contact me</a>
+                        </li>
                         </li>
                     </ul>
                 </div>
@@ -37,13 +42,12 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-sm-9">
-                            <h6 class="text-blue">Hello</h6>
+                            <h6 class="text-blue">Hello, I'm</h6>
                             <h1 class="display-2 fw-bold">Noah Yanga</h1>
-                            <h2 class="fw-normal pb-3">ideas &rarr; ??? &rarr; fruition</h2>
-                            <a href="#projects" class="btn btn-outline-blue">View my work &rarr;</a>
+                            <a href="#projects" class="btn btn-outline-primary">View my work &rarr;</a>
                         </div>
                         <div class="col-sm-3">
-                            <img src="avatar.png" alt="Avatar" class="img-fluid rounded">
+                            <img src="images/noah.png" alt="noah" class="img-fluid rounded-circle">
                         </div>
                     </div>
                 </div>
@@ -51,43 +55,54 @@
 
             <section id="intro" class="bg-blue text-white py-5">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-sm-5">
-                            <h1 class="fw-bolder pb-4">Hello !</h1>
-                            <p class="lead">I've always wanted to express my thoughts creatively...</p>
+                            <h1 class="fw-bolder pb-4">Software Developer</h1>
+                            <p class="lead">I am an aspiring software developer currently in my final term in the BIT program at RRC Polytechnic
+                            </p>
                         </div>
-                        <div class="col-sm-7">
-                            <img src="desk.png" alt="desk" class="img-fluid">
-                        </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/noahyanga" target="_blank" ><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/noah-yanga-9654b61a5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:noag29@hotmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
+
                 </div>
             </section>
 
             <section id="services" class="container my-5">
                 <div class="card-group">
                     <div class="card">
-                        <img src="fullstack-development.png" class="card-img-top" alt="Full Stack Development">
+                        <p><i class="fa-solid fa-code" style="font-size: 60px; color:#028AF2;"></i></p>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Full Stack Developer</h5>
-                            <p class="card-text">I code with simplicity and beautiful design in mind.</p>
-                            <p><strong>Languages:</strong> PHP, HTML, CSS, JavaScript, SQL, Git, etc.</p>
-                            <p><strong>Dev Tools:</strong> Visual Studio Code, GitHub, etc.</p>
+                            <h5 class="card-title fw-bold">Full Stack Web Development</h5>
+                            <p class="card-text">I code with simplicity and intuitive design in mind.</p>
+                            <p><strong>Languages:</strong> PHP, HTML, CSS, JavaScript, SQL, Git, +</p>
+                            <p><strong>Dev Tools:</strong> Visual Studio Code, GitHub, + </p>
                         </div>
                     </div>
-                   
                 </div>
             </section>
 
             <section id="projects" class="container my-5">
-                <h1 class="fw-bolder text-center">/projects.</h1>
-                <p class="lead text-center">Hand selected projects I've worked on in the past.</p>
+                <h1 class="fw-bolder text-center" style="color: #028AF2;">Projects</h1>
+                <p class="lead text-center">past work</p>
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                     <div class="col">
                         <div class="card">
-                            <img src="projects/iosappar.png" class="card-img-top" alt="iOS AR App (WIP)">
+                            <img src="images/sneakerworld.png" class="card-img-top" alt="SneakerWorld">
                             <div class="card-body">
-                                <p class="card-text">Content Management System</p>
-                                <a href="projects/iosappar.png" class="btn btn-outline-blue">Preview</a>
+                                <p class="card-text">SneakerWorld CMS</p>
+                                <a href="images/sneakerworld.png" class="btn btn-outline-primary">Preview</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="images/ny.webp" class="card-img-top" alt="second project">
+                            <div class="card-body">
+                                <p class="card-text">another project</p>
+                                <a href="images/ny.webp" class="btn btn-outline-primary">Preview</a>
                             </div>
                         </div>
                     </div>
@@ -98,6 +113,11 @@
 
         <footer class="text-center py-4">
             <p>Created by Noah Yanga</p>
+             <div class="social-icons">
+            <a href="https://github.com/noahyanga" target="_blank" ><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/noah-yanga-9654b61a5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:noag29@hotmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
         </footer>
     </div>
 <script src="script.js"></script>

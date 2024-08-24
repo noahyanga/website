@@ -34,13 +34,22 @@ html {
     margin-right: 15px;
 }
 
-.btn-outline-blue {
-    color: #028AF2;
+.nav-item {
+    margin: 10px 0;
+    text-align: center;
 }
 
-.btn-outline-blue:hover {
-    background-color: #9AD3FE;
-    color: #fff;
+.nav-item:not(:last-child) {
+    border-bottom: 1px gray;
+}
+
+
+.btn-outline-primary {
+    background-color: #028AF2;
+}
+
+.btn-outline-primary:hover {
+    background-color: #028AF2;
 }
 
 /* Header Section Styles */
@@ -85,6 +94,10 @@ html {
     padding-bottom: 60px;
 }
 
+#projects h1.fw-bolder {
+    color: #028AF2;
+}
+
 #services .card,
 #projects .card {
     border: 1px solid #ddd;
@@ -118,16 +131,31 @@ html {
     margin-bottom: 10px;
 }
 
-#projects .btn-outline-blue {
+#projects .btn-outline-primary {
     margin-top: 10px;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #f8f9fa;
+    background-color: #028AF2;
     padding: 20px;
     text-align: center;
-    color: #6c757d;
+    color: white; 
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a:hover {
+    color: #9AD3FE;
+}
+
+.social-icons a {
+    color: #ffffff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 50px;
 }
 
 /* Responsive Styles */
@@ -145,3 +173,4 @@ footer {
         padding: 20px;
     }
 }
+
