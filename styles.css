@@ -64,8 +64,16 @@ html {
     margin-bottom: 15px;
 }
 
+#about h1 {
+    font-size: 4rem;
+}
+
 #about .btn {
     margin-top: 20px;
+}
+
+#about img {
+    width: 400px;
 }
 
 /* Intro Section Styles */
@@ -75,11 +83,11 @@ html {
 }
 
 #intro h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 #intro p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 #intro img {
@@ -160,8 +168,28 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    #about {
+        text-align: center;
+    }
     #about h1 {
         font-size: 2.5rem;
+    }
+
+    #about img {
+        width: 250px;
+        padding: 20px;
+    }
+
+    #intro h1 {
+        font-size: 3rem;
+    }
+
+    #intro p {
+        font-size: 1.2rem;
+    }
+
+    #intro {
+        text-align: center;
     }
 
     #intro h1 {
@@ -172,5 +200,6 @@ footer {
     #projects .card-body {
         padding: 20px;
     }
+
 }
 
