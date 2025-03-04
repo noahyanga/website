@@ -1,134 +1,715 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah Yanga | Web Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/b01461b269.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noah Yanga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="css/styles.css" type="text/css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/b01461b269.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#3B82F6',  // Blue
+            'primary-light': '#60A5FA',
+            'secondary': '#1D4ED8', // Darker blue
+            'accent': '#10B981',   // Green
+            'dark': '#0f172a',
+            'light': '#f8fafc',
+            'red': 'red',
+          },
+          boxShadow: {
+            'glow': '0 15px 30px -5px rgba(59, 130, 246, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-    <div id="home">
-        <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-            <div class="container-fluid">
-                <a href="#home" ><i class="fa fa-user-circle" style="font-size: 50px;" ></i></a>
-                <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="#projects" class="nav-link">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#skills" class="nav-link">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="mailto:noag29@hotmail.com" class="btn btn-outline-primary">Contact me</a>
-                        </li>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
 
-        <main>
-            <section id="about" class="container-fluid py-5">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-sm-9">
-                            <h6 class="text-blue">Hello, I'm</h6>
-                            <h1 class="display-2 fw-bold">Noah Yanga</h1>
-                            <a href="#projects" class="btn btn-outline-primary">View my work &rarr;</a>
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="images/noah.png" alt="noah" class="img-fluid rounded-circle">
-                        </div>
-                    </div>
-                </div>
-            </section>
+<body
+  class="light-mode font-sans text-gray-800 bg-gradient-to-br from-light to-gray-100 dark:from-dark dark:to-gray-900 dark:text-light transition-colors duration-300">
 
-            <section id="intro" class="bg-blue text-white py-5">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-sm-8">
-                            <h1 class="fw-bolder pb-4">Software Developer</h1>
-                            <p class="lead">I am an aspiring software developer currently in my final term in the BIT program at RRC Polytechnic
-                            </p>
-                        </div>
-                    <div class="social-icons">
-                        <a href="https://github.com/noahyanga" target="_blank" ><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/noah-yanga-9654b61a5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="mailto:noag29@hotmail.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-            </section>
+  <div class="intense-background">
+    <div class="liquid-blob"></div>
+    <div class="particle-storm"></div>
+    <div class="light-trail"></div>
+  </div>
 
-            <section id="skills" class="container my-5">
-                <div class="card-group">
-                    <div class="card">
-                        <p><i class="fa-solid fa-code" style="font-size: 60px; color:#028AF2;"></i></p>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Full Stack Web Development</h5>
-                            <p class="card-text">I code with simplicity and intuitive design in mind.</p>
-                            <p><strong>Languages:</strong> PHP, HTML, CSS, JavaScript, SQL, Git, +</p>
-                            <p><strong>Dev Tools:</strong> Visual Studio Code, GitHub</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <button id="back-to-top"
+    class="fixed bottom-6 right-6 p-3 bg-primary text-white rounded-full shadow-md hover:bg-secondary transition-colors duration-300 opacity-0 invisible transform translate-y-10 transition-all duration-300"
+    aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-            <section id="projects" class="container my-5">
-                <h1 class="fw-bolder text-center" style="color: #028AF2;">Projects</h1>
-                <p class="lead text-center">past work</p>
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col">
-                        <div class="card">
-                            <img src="images/sneakerworld.png" class="card-img-top" alt="SneakerWorld">
-                            <div class="card-body">
-                                <p class="card-text">SneakerWorld CMS</p>
-                                <a href="images/sneakerworld.png" class="btn btn-outline-primary">Preview</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="images/todo.png" class="card-img-top" alt="SneakerWorld">
-                            <div class="card-body">
-                                <p class="card-text">React Productivity Manager</p>
-                                <a href="https://react-productivity.netlify.app/" class="btn btn-outline-primary">Preview</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="card-text">More coming soon!</p>
-                                <a href="" class="btn btn-outline-primary">Preview</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Repeat for other projects -->
-                </div>
-                </div>
-
-            </section>
-        </main>
-
-        <footer class="text-center py-4">
-            <p>Created by Noah Yanga</p>
-             <div class="social-icons">
-            <a href="https://github.com/noahyanga" target="_blank" ><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/noah-yanga-9654b61a5/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:noag29@hotmail.com"><i class="fas fa-envelope"></i></a>
+  <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40 dark:bg-dark/90 transition-colors duration-300">
+    <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="#" class="text-2xl text-primary font-bold gradient-text">NY</a>
+      <div class="nav-links hidden md:flex items-center gap-10">
+        <a href="#home" class="hover:text-primary transition-colors duration-300 font-medium">Home</a>
+        <a href="#about" class="hover:text-primary transition-colors duration-300 font-medium">About</a>
+        <a href="#experience" class="hover:text-primary transition-colors duration-300 font-medium">Experience</a>
+        <a href="#projects" class="hover:text-primary transition-colors duration-300 font-medium">Projects</a>
+        <a href="#contact" class="hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+        <button id="resume-modal-button"
+          class="bg-primary text-light px-6 py-2 rounded-full hover:bg-secondary transition-colors duration-300 shadow-sm hover:shadow-glow">
+          View Resume
+        </button>
+      </div>
+      <button class="nav-toggle md:hidden p-2" aria-label="Toggle navigation">
+        <div class="w-6 h-6 relative">
+          <span
+            class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-1 dark:bg-light"></span>
+          <span
+            class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-3 dark:bg-light"></span>
+          <span
+            class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-5 dark:bg-light"></span>
         </div>
-        </footer>
+      </button>
     </div>
-<script src="script.js"></script>
+
+    <div
+      class="mobile-menu hidden bg-white/95 dark:bg-dark/95 backdrop-blur-md p-5 absolute w-full shadow-md transition-all duration-300">
+      <div class="flex flex-col space-y-4">
+        <a href="#home" class="hover:text-primary transition-colors duration-300 font-medium">Home</a>
+        <a href="#about" class="hover:text-primary transition-colors duration-300 font-medium">About</a>
+        <a href="#experience" class="hover:text-primary transition-colors duration-300 font-medium">Experience</a>
+        <a href="#projects" class="hover:text-primary transition-colors duration-300 font-medium">Projects</a>
+        <a href="#contact" class="hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+        <button id="mobile-resume-modal-button"
+          class="bg-primary text-light px-6 py-2 rounded-full hover:bg-secondary transition-colors duration-300 shadow-sm hover:shadow-glow text-center">
+          View Resume
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <section id="home" class="relative min-h-screen flex items-center pt-16 md:pt-24 pb-16 md:pb-32">
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent dark:from-primary/10 dark:to-transparent -z-10">
+    </div>
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+        <!-- Text Content -->
+        <div data-aos="fade-right" class="space-y-6 md:space-y-8 text-center md:text-left">
+          <div class="inline-block px-3 py-1 md:px-4 md:py-2 bg-primary/10 rounded-full">
+            <span class="text-base md:text-lg text-primary font-medium">Hello, I'm</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <span class="gradient-text">Noah</span> Yanga
+          </h1>
+
+          <p class="text-xl md:text-2xl text-dark/80 dark:text-light/60">Full-Stack Developer</p>
+
+          <!-- Buttons -->
+          <div class="flex flex-row sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#projects"
+              class="bg-primary text-light px-6 py-2 md:px-8 md:py-3 rounded-full hover:bg-secondary transition-all duration-300 shadow-sm hover:shadow-glow text-sm md:text-base">
+              Explore My Work
+            </a>
+            <a href="#contact"
+              class="border-2 border-primary bg-transparent text-primary px-6 py-2 md:px-8 md:py-3 rounded-full hover:bg-primary/10 transition-all duration-300 text-sm md:text-base">
+              Get In Touch
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex justify-center md:justify-start gap-4 md:gap-6 pt-4">
+            <a href="https://github.com/noahyanga" target="_blank"
+              class="text-dark/70 dark:text-light/70 hover:text-primary text-5xl md:text-4xl transition-colors duration-300">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/noah-yanga-9654b61a5/" target="_blank"
+              class="text-dark/70 dark:text-light/70 hover:text-primary text-5xl md:text-4xl transition-colors duration-300">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:noag29@hotmail.com"
+              class="text-dark/70 dark:text-light/70 hover:text-primary text-5xl md:text-4xl transition-colors duration-300">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Section -->
+        <div data-aos="fade-left" class="relative flex justify-center mt-8 md:mt-0">
+          <div class="absolute -inset-4 bg-gradient-to-br from-primary to-accent opacity-20 blur-xl rounded-full"></div>
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-dark/20 dark:border-light/20 group shadow-sm md:shadow-soft">
+            <img src="images/noah.png" alt="Noah Yanga"
+              class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/40 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 relative overflow-hidden">
+    <div class="container mx-auto px-4 sm:px-6">
+      <div class="text-center mb-20" data-aos="fade-up">
+        <span
+          class="inline-block mb-4 text-primary font-medium uppercase text-sm bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20">
+          Beyond the Code
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="gradient-text">Building Solutions</span><br>
+          <span class="text-3xl md:text-4xl font-normal text-dark/80 dark:text-light/60">Through Creative
+            Engineering</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div class="space-y-8" data-aos="fade-right">
+          <!-- Academic Journey div -->
+          <div
+            class="bg-white dark:bg-dark/80 p-8 rounded-3xl shadow-soft-xl border border-gray-100 dark:border-gray-800">
+            <div class="flex items-start gap-4 mb-6">
+              <div class="bg-primary/10 p-3 rounded-xl shrink-0">
+                <i class="fas fa-graduation-cap text-3xl text-primary"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2">Education</h3>
+                <p class="text-sm text-dark/70 dark:text-light/70">
+                  Business Information Technology @ RRC Polytechnic<br>
+                  <span class="text-primary">2022-2024</span><br>
+                  Graduated with Honours
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Tech Radar div -->
+          <div class="bg-accent/5 p-8 rounded-3xl border border-accent/20 backdrop-blur-sm">
+            <h3 class="text-xl font-semibold mb-6">Tech Radar</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl bg-white dark:bg-dark/80 border border-gray-100 dark:border-gray-800">
+                <div class="text-primary font-medium mb-2">Languages</div>
+                <ul class="space-y-2 text-sm">
+                  <li class="flex items-center gap-2"><i class="fab fa-react text-primary"></i>React</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-gem text-primary"></i>Ruby on Rails</li>
+                  <li class="flex items-center gap-2"><i class="fa-brands fa-css text-primary"></i>HTML/CSS</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-mug-hot text-primary"></i>JavaScript</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-newspaper text-primary"></i>PHP</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-staff-snake text-primary"></i>Python</li>
+                </ul>
+              </div>
+              <div class="p-4 rounded-xl bg-white dark:bg-dark/80 border border-gray-100 dark:border-gray-800">
+                <div class="text-accent font-medium mb-2">Currently Learning</div>
+                <ul class="space-y-2 text-sm">
+                  <li class="flex items-center gap-2"><i class="fas fa-code text-accent"></i>
+                    Node.js</li>
+                  <li class="flex items-center gap-2"><i class="fab fa-react text-accent"></i>React Native
+                  </li>
+
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-server text-accent"></i> Next.js
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-8" data-aos="fade-up">
+          <!-- About Me div -->
+          <div
+            class="bg-white dark:bg-dark/80 p-8 rounded-3xl shadow-soft-xl border border-gray-100 dark:border-gray-800">
+            <h3 class="text-xl font-semibold mb-4">About Me</h3>
+            <p class="text-dark/70 dark:text-light/70">
+              As a developer, I bring a team-first mindset and a drive to keep learning. My background in sports taught
+              me the value of collaboration and continuous improvement—skills I apply to coding every day. I love
+              building solutions that are both functional and user-friendly, inspired by the game websites that first
+              sparked my curiosity about design. I'm eager to learn from experienced developers, share my own insights,
+              and contribute to meaningful projects
+            </p>
+          </div>
+          <!-- Personal Interests div -->
+          <div
+            class="bg-white dark:bg-dark/80 p-8 rounded-3xl shadow-soft-xl border border-gray-100 dark:border-gray-800">
+            <h3 class="text-xl font-semibold mb-4">Personal Interests</h3>
+            <p class="text-dark/70 dark:text-light/70">
+              When I’m not codiing, you’ll probably find me at the gym, trying out a new recipe in the kitchen, or
+              getting outside—whether it’s a hike, a walk, or just enjoying the fresh air. I also love reading and
+              always have a book on the go. Staying active and exploring different interests helps me keep a good
+              balance and reset after long coding sessions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center" data-aos="fade-up">
+        <a href="#projects"
+          class="group inline-flex items-center gap-2 bg-primary text-light px-8 py-3.5 rounded-full hover:bg-secondary transition-all duration-300 shadow-glow hover:shadow-glow-lg">
+          <span>Explore My Work</span>
+          <i class="fas fa-arrow-down text-sm transform group-hover:translate-y-1 transition-transform"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="py-24 relative">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center mb-16" data-aos="fade-up">
+        <div class="inline-block px-4 py-1 bg-primary/10 rounded-full mb-3">
+          <span class="text-sm text-primary font-medium">EXPERIENCE</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text">Work History</h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-12">
+        <div class="relative" data-aos="fade-up">
+          <div class="absolute w-0.5 bg-primary/30 top-0 bottom-0 left-6 md:left-10"></div>
+          <div class="relative pl-12 md:pl-16">
+            <div
+              class="absolute w-10 h-10 rounded-full bg-primary left-0 md:left-4 -top-2 flex items-center justify-center shadow-glow">
+              <div class="w-5 h-5 rounded-full bg-light dark:bg-dark"></div>
+            </div>
+            <div
+              class="bg-white dark:bg-dark/80 rounded-xl shadow-soft p-8 border border-gray-100 dark:border-gray-800 hover:shadow-glow transition-all duration-300">
+              <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                <h3 class="text-2xl font-semibold">Software Developer (Co-op)</h3>
+                <span
+                  class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mt-2 md:mt-0">April
+                  2024 - August 2024</span>
+              </div>
+              <h4 class="text-lg text-dark/70 dark:text-light/70 mb-4">ACE Project Space</h4>
+              <ul class="space-y-2 text-dark/70 dark:text-light/70">
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                  <span>Developed and maintained a dynamic website as part of a 6-member team, utilizing Agile
+                    methodologies</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                  <span>Designed and deployed an administrative dashboard enabling user creation. editing, and
+                    deletion</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                  <span>Enhanced Mapbox API integration to deliver consistent and interactive map functionality</span>
+                </li>
+
+                <li class="flex items-start">
+                  <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                  <span>Implemented automated email communications by integrating PHPMailer into the dashboard</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-24 bg-white/50 dark:bg-dark/50 relative">
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5 dark:from-primary/10 dark:to-accent/10 -z-10">
+    </div>
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center mb-16" data-aos="fade-up">
+        <div class="inline-block px-4 py-1 bg-primary/10 rounded-full mb-3">
+          <span class="text-sm text-primary font-medium">PROJECTS</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text">Recent Projects</h2>
+      </div>
+
+
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card Template -->
+        <div
+          class="group bg-white dark:bg-dark/80 rounded-xl shadow-soft overflow-hidden project-card hover:shadow-glow relative cursor-pointer transition-all duration-300 hover:-translate-y-2 border-2 border-secondary"
+          data-aos="fade-up" data-project="prairie-plants" data-details='{
+             "title": "Prairie Plants",
+             "description": "Full-stack ecommerce platform for botanical products with inventory management and payment processing.",
+             "challenges": ["Deploying with Docker and Fly.io", "Secure payment gateway integration", "Responsive design for multiple screen resolutions"],
+             "features": ["Cart functionality", "Product searching/filtering", "Shipping calculator", "Checkout process"],
+             "duration": "2 months",
+             "team": "Solo project",
+             "tech": ["Ruby on Rails", "Fly.io", "PostgreSQL", "Stripe API", "AWS S3", "Docker"]
+           }'>
+          <div class="relative aspect-w-16 aspect-h-9">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <img src="images/prairieplants.png" alt="Prairie Plants" class="h-56 w-full object-cover" />
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h3 class="text-xl font-semibold text-light">Prairie Plants</h3>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">E-commerce</span>
+                <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">Full-stack</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <p class="text-dark/70 dark:text-light/70 mb-4 line-clamp-2">An ecommerce website for plants and gardening
+              equipment.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fab fa-react text-sm"></i> Ruby on Rails
+              </span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/noahyanga/prairie-plants" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://prairie-plants.fly.dev/" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div
+          class="group bg-white dark:bg-dark/80 rounded-xl shadow-soft overflow-hidden project-card hover:shadow-glow relative cursor-pointer transition-all duration-300 hover:-translate-y-2 border-2 border-secondary"
+          data-aos="fade-up" data-project="GESSCAM" data-details='{
+             "title": "GESSCAM",
+             "description": "Community page for the Greater Equatoria of South Sudanese Community Association of Manitoba",
+             "challenges": ["First time deploying app with Docker", "Responsive design for multiple screen resolutions", "First time using Next.js and deploying to Vercel"], 
+             "features": ["User login functionality", "Post searching/filtering", "Admin CRUD functionality", "Comments associated with posts"],
+             "duration": "2 months",
+             "team": "Solo project",
+             "tech": ["React", "Typescript", "Next.js", "PostgreSQL", "Vercel", "Cloudinary", "Prisma"]
+           }'>
+          <div class="relative aspect-w-16 aspect-h-9">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <img src="images/gesscam-screenshot.png" alt="GESSCAM" class="h-56 w-full object-cover" />
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h3 class="text-xl font-semibold text-light">GESSCAM</h3>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">Community</span>
+                <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">Full-stack</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <p class="text-dark/70 dark:text-light/70 mb-4 line-clamp-2">Community page for the Greater Equatoria of
+              South Sudanese Community Association of Manitoba</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fab fa-react text-sm"></i> React
+              </span>
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fas fa-server text-sm"></i> Next.js
+              </span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/noahyanga/gesscam" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://gesscam.vercel.app/home" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div
+          class="group bg-white dark:bg-dark/80 rounded-xl shadow-soft overflow-hidden project-card hover:shadow-glow relative cursor-pointer transition-all duration-300 hover:-translate-y-2 border-2 border-secondary"
+          data-aos="fade-up" data-project="Weather Data Processor" data-details='{
+             "title": "Weather Data Processor",
+             "description": "Python app that scrapes historical weather data from the Government of Canada and visualizes it in a box plot or line plot",
+             "challenges": ["Created custom web scraper", "Designing a UI for the app", "Making the app an exe file"],
+             "features": ["Download up to date weather data", "Use box/line plots to visualize data", "UI for using app", "Program executable file", "Concurrency for faster scraping"],
+             "duration": "3 weeks",
+             "team": "Group project",
+             "tech": ["Python", "SQLite", "matlibplot"]
+           }'>
+          <div class="relative aspect-w-16 aspect-h-9">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <img src="images/python-weather.png" alt="Weather Data Processor" class="h-56 w-full object-cover" />
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h3 class="text-xl font-semibold text-light">Weather Data Processor</h3>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">Data Visualization</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <p class="text-dark/70 dark:text-light/70 mb-4 line-clamp-2">Python app that scrapes historical weather data
+              from the government of Canada and visualizes it in a box plot or line plot</p>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fa-solid fa-staff-snake text-primary"></i>Python
+              </span>
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fas fa-server text-sm"></i> SQLite
+              </span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/noahyanga/weather-app" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div
+          class="group bg-white dark:bg-dark/80 rounded-xl shadow-soft overflow-hidden project-card hover:shadow-glow relative cursor-pointer transition-all duration-300 hover:-translate-y-2 border-2 border-secondary"
+          data-aos="fade-up" data-project="Productivity App" data-details='{
+             "title": "Productivity App",
+             "description": "To-do app for organizing and setting focus on tasks",
+             "challenges": ["Using React for the first time", "Using React DnD", "Deploying via Netlify for the first time"],
+             "features": ["Organize order of tasks via drag and drop", "Ability to add and delete tasks", "Mark tasks as completed"],
+             "duration": "2 weeks",
+             "team": "Solo project",
+             "tech": ["React", "Netlify", "React DnD"]
+           }'>
+          <div class="relative aspect-w-16 aspect-h-9">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <img src="images/todo.png" alt="Productivity App" class="h-56 w-full object-cover" />
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h3 class="text-xl font-semibold text-light">Productivity App</h3>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">Frontend</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <p class="text-dark/70 dark:text-light/70 mb-4 line-clamp-2">To-do app for organizing and setting focus on
+              tasks</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fab fa-react text-sm"></i> React
+              </span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/noahyanga/react-todo" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://react-productivity.netlify.app/" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div
+          class="group bg-white dark:bg-dark/80 rounded-xl shadow-soft overflow-hidden project-card hover:shadow-glow relative cursor-pointer transition-all duration-300 hover:-translate-y-2 border-2 border-secondary"
+          data-aos="fade-up" data-project="Portfolio" data-details='{
+             "title": "Portfolio",
+             "description": "My personal portfolio page to showcase projects and practice web development skills.",
+             "challenges": ["Figuring out a good layout for content", "Making aesthetically pleasing animations with JavaScript", "Responsive design for multiple screen resolutions"],
+             "features": ["Smooth scrolling", "Modals of images", "Responsive design/functionality for mobile"],
+             "duration": "Ongoing",
+             "team": "Solo project",
+             "tech": ["HTML", "CSS/Tailwind", "JavaScript", "Netlify"]
+           }'>
+          <div class="relative aspect-w-16 aspect-h-9">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <img src="images/portfolio.png" alt="Prairie Plants" class="h-56 w-full object-cover" />
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <h3 class="text-xl font-semibold text-light">Portfolio Website</h3>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">Frontend</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6">
+            <p class="text-dark/70 dark:text-light/70 mb-4 line-clamp-2">My personal portfolio page to showcase projects
+              and practice web development skills</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fab fa-react text-sm"></i> HTML/CSS
+              </span>
+              <span class="bg-primary/10 text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                <i class="fas fa-server text-sm"></i> JavaScript
+              </span>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex space-x-4">
+                <a href="https://github.com/noahyanga/website" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://noahyanga.netlify.app/" target="_blank"
+                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Repeat for other projects -->
+      </div>
+    </div>
+
+    <div id="resume-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center flex items-center justify-center">
+      <div class="bg-dark p-8 rounded-lg shadow-lg max-w-2xl w-full">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-2xl font-semibold">Resume</h2>
+          <button id="close-resume-modal"
+            class="top-4 right-4 p-2 text-dark/70 dark:text-light/70 hover:text-red transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div id="resume-content">
+          <img src="images/resume-jan16.png" alt="Resume" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="mt-4 flex justify-end">
+          <a href="images/resume-jan16.png" download
+            class="bg-primary text-light px-6 py-2 rounded-full hover:bg-secondary transition-colors duration-300 shadow-sm hover:shadow-glow">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Details Modal -->
+    <div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm bg-black/50"
+      id="project-modal">
+      <div
+        class="bg-white dark:bg-dark rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative border-2 border-secondary">
+        <button class="absolute top-4 right-4 p-2 text-dark/70 dark:text-light/70 hover:text-red transition-colors"
+          id="close-project-modal">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+
+
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-6">
+            <h3 class="text-2xl font-bold" id="modal-title"></h3>
+
+          </div>
+
+          <div class="grid gap-6">
+            <div class="aspect-video bg-dark/5 rounded-xl overflow-hidden">
+              <img id="modal-image" class="w-full h-full object-contain" />
+            </div>
+
+            <div>
+              <h4 class="font-semibold mb-2">Project Overview</h4>
+              <p id="modal-description" class="text-dark/70 dark:text-light/70"></p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold mb-2">Key Features</h4>
+                <ul id="modal-features" class="list-disc pl-5 space-y-1 text-dark/70 dark:text-light/70"></ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold mb-2">Tech Stack</h4>
+                <div id="modal-tech" class="flex flex-wrap gap-2"></div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold mb-2">Project Details</h4>
+                <dl class="grid grid-cols-2 gap-2 text-sm">
+                  <dt class="text-dark/50 dark:text-light/50">Duration</dt>
+                  <dd id="modal-duration" class="text-dark/70 dark:text-light/70"></dd>
+                  <dt class="text-dark/50 dark:text-light/50">Team Size</dt>
+                  <dd id="modal-team" class="text-dark/70 dark:text-light/70"></dd>
+                </dl>
+              </div>
+
+              <div>
+                <h4 class="font-semibold mb-2">Challenges Overcome</h4>
+                <ul id="modal-challenges" class="list-disc pl-5 space-y-1 text-dark/70 dark:text-light/70"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="py-24 relative">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center mb-16" data-aos="fade-up">
+        <div class="inline-block px-4 py-1 bg-primary/10 rounded-full mb-3">
+          <span class="text-sm text-primary font-medium">CONTACT</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text">Get In Touch</h2>
+      </div>
+
+      <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+        <p class="text-xl text-dark/70 dark:text-light/70 mb-8">Have a project in mind or just want to connect?</p>
+        <div class="flex justify-center gap-6">
+          <a href="mailto:noag29@hotmail.com"
+            class="bg-primary text-light px-8 py-3 mb-5 rounded-full hover:bg-secondary transition-all duration-300 shadow-soft hover:shadow-glow">
+            <i class="fas fa-envelope mr-2"></i>Send Email
+          </a>
+        </div>
+        <div class="flex justify-center gap-6 mt-8">
+          <a href="https://github.com/noahyanga" target="_blank"
+            class="text-white/70 hover:text-primary text-5xl transition-colors duration-300">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/noah-yanga-9654b61a5/" target="_blank"
+            class="text-white/70 hover:text-primary text-5xl transition-colors duration-300">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a id="bottom-resume-link" href="images/Jan16-resume.pdf" download
+            class="text-white/70 hover:text-primary text-5xl transition-colors duration-300"><i
+              class="fa fa-address-card"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white/50 dark:bg-dark/50 border-t border-gray-100 dark:border-gray-800">
+    <div class="container mx-auto px-6 py-8 text-center">
+      <p class="text-sm text-dark/70 dark:text-light/70">
+        <span class="block mt-2">Built by Noah Yanga 🩵</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+
 </body>
+
 </html>

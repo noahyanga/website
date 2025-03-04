@@ -1,0 +1,136 @@
+    .gradient-text {
+      @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    }
+
+    .nav-active {
+      @apply text-primary relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full;
+    }
+
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .skill-box:hover .skill-icon {
+      transform: scale(1.1);
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #c7c7c7;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569;
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+
+    .intense-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      background: linear-gradient(45deg, #0f172a 0%, #1e293b 100%);
+    }
+
+    .liquid-blob {
+      position: absolute;
+      width: 180vw;
+      height: 180vh;
+      background: radial-gradient(circle at 50% 50%,
+          rgba(59, 130, 246, 0.6) 0%,
+          rgba(16, 185, 129, 0.4) 40%,
+          transparent 100%);
+      animation: blob-morph 25s infinite ease-in-out;
+    }
+
+
+
+    @keyframes blob-morph {
+      0% {
+        border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+      }
+
+      50% {
+        border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+      }
+
+      100% {
+        border-radius: 40% 60% 60% 40% / 60% 40% 60% 40%;
+      }
+    }
+
+    .particle-storm {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(16, 185, 129, 0.8);
+      border-radius: 50%;
+      filter: blur(2px);
+      transition: all 0.5s ease-out;
+    }
+
+    .light-trail {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle,
+          rgba(59, 130, 246, 0.2) 0%,
+          /* Blue trail */
+          transparent 100%);
+      filter: blur(30px);
+      pointer-events: none;
+      opacity: 0;
+    }
+
+
+    .text-accent {
+      color: #10B981;
+    }
+
+    /* Update gradient borders */
+    .bg-gradient-to-br.from-primary.to-accent {
+      background-image: linear-gradient(to bottom right, #3B82F6, #10B981);
+    }
