@@ -162,13 +162,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Attach modal background click listener for project modal
-  projectModal.addEventListener('click', (event) => {
-    if (event.target === projectModal) {
-      projectModal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden'); // Remove overflow-hidden
-    }
-  });
-
+  if (projectModal) {
+    projectModal.addEventListener('click', (event) => {
+      if (event.target === projectModal) {
+        projectModal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden'); // Remove overflow-hidden
+      }
+    });
+  }
   document.querySelectorAll('[data-project]').forEach(card => {
     card.addEventListener('click', (e) => {
       if (e.target.tagName === 'A') return;

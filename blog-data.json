@@ -1,0 +1,47 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "My Guide to Git Gud at Programming",
+      "slug": "improving-programming",
+      "date": "2025-04-09",
+      "excerpt": "Tips and strategies for becoming a better programmer through deliberate practice and effective learning techniques.",
+      "content": "Full article content about programming improvement...",
+      "categories": ["programming", "learning"],
+      "tags": ["git", "practice", "skills", "development"],
+      "image": "images/blog/programming-guide.jpg",
+      "readTime": "5 min read"
+    },
+    {
+      "id": 2,
+      "title": "The Fundamental Right of Privacy",
+      "slug": "privacy",
+      "date": "2024-05-28",
+      "excerpt": "Exploring the importance of digital privacy in modern society and how to protect your personal data.",
+      "content": "Full article content about privacy...",
+      "categories": ["technology", "ethics"],
+      "tags": ["privacy", "security", "rights", "data"],
+      "image": "images/blog/privacy.jpg",
+      "readTime": "7 min read"
+    },
+    {
+      "id": 3,
+      "title": "Intelligence is Horsepower, But You Need More to Go Places",
+      "slug": "intelligence",
+      "date": "2025-04-10",
+      "excerpt": "Reflections on the relationship between intelligence and success in software development and life.",
+      "content": "Full article content about intelligence...",
+      "categories": ["personal development"],
+      "tags": ["intelligence", "growth", "mindset", "success"],
+      "image": "images/blog/intelligence.jpg",
+      "readTime": "4 min read"
+    }
+  ],
+  "categories": [
+    {"name": "programming", "count": 1},
+    {"name": "learning", "count": 1},
+    {"name": "technology", "count": 1},
+    {"name": "ethics", "count": 1},
+    {"name": "personal development", "count": 1}
+  ]
+}

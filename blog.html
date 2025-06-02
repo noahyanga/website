@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noah Yanga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="css/styles.css" type="text/css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/ny-better-removebg-preview.png">
+  <script src="https://kit.fontawesome.com/b01461b269.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#3B82F6',  // Blue
+            'primary-light': '#60A5FA',
+            'secondary': '#1D4ED8', // Darker blue
+            'accent': '#10B981',   // Green
+            'dark': '#0f172a',
+            'light': '#f8fafc',
+            'red': 'red',
+          },
+          boxShadow: {
+            'glow': '0 15px 30px -5px rgba(59, 130, 246, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body
+  class="light-mode font-sans text-gray-800 bg-gradient-to-br from-light to-gray-100 dark:from-dark dark:to-gray-900 dark:text-light transition-colors duration-300">
+
+  <div class="intense-background">
+    <div class="liquid-blob"></div>
+    <div class="particle-storm"></div>
+    <div class="light-trail"></div>
+  </div>
+
+  <button id="back-to-top"
+    class="fixed bottom-6 right-6 p-3 bg-primary text-white rounded-full shadow-md hover:bg-secondary transition-colors duration-300 opacity-0 invisible transform translate-y-10 transition-all duration-300"
+    aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+
+  <nav class="sticky top-0 bg-white/90 backdrop-blur-md shadow-sm z-40 dark:bg-dark/90 transition-colors duration-300">
+    <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+      <a href="index.html" class="text-2xl text-primary font-bold gradient-text">NY</a>
+      <div class="nav-links hidden md:flex items-center gap-10">
+        <a href="/index.html#home" class="hover:text-primary transition-colors duration-300 font-medium">Home</a>
+        <a href="/index.html#about" class="hover:text-primary transition-colors duration-300 font-medium">About</a>
+        <a href="/index.html#experience"
+          class="hover:text-primary transition-colors duration-300 font-medium">Experience</a>
+        <a href="/index.html#projects"
+          class="hover:text-primary transition-colors duration-300 font-medium">Projects</a>
+        <a href="blog.html" class="hover:text-primary transition-colors duration-300 font-medium">Blog</a>
+        <a href="/index.html#contact" class="hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+        <button id="resume-modal-button"
+          class="bg-primary text-light px-6 py-2 rounded-full hover:bg-secondary transition-colors duration-300 shadow-sm hover:shadow-glow">
+          View Resume
+        </button>
+
+      </div>
+      <button class="nav-toggle md:hidden p-2" aria-label="Toggle navigation">
+        <div class="w-6 h-6 relative">
+          <span
+            class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-1 dark:bg-light"></span>
+          <span
+            class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-3 dark:bg-light"></span>
+          <span
+            class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-5 dark:bg-light"></span>
+        </div>
+      </button>
+    </div>
+
+    <div
+      class="mobile-menu hidden bg-white/95 dark:bg-dark/95 backdrop-blur-md p-5 absolute w-full shadow-md transition-all duration-300">
+      <div class="flex flex-col space-y-4">
+        <a href="index.html#home" class="hover:text-primary transition-colors duration-300 font-medium">Home</a>
+        <a href="index.html#about" class="hover:text-primary transition-colors duration-300 font-medium">About</a>
+        <a href="index.html#experience"
+          class="hover:text-primary transition-colors duration-300 font-medium">Experience</a>
+        <a href="index.html#projects" class="hover:text-primary transition-colors duration-300 font-medium">Projects</a>
+        <a href="blog.html" class="hover:text-primary transition-colors duration-300 font-medium">Blog</a>
+        <a href="index.html#contact" class="hover:text-primary transition-colors duration-300 font-medium">Contact</a>
+        <button id="mobile-resume-modal-button"
+          class="bg-primary text-light px-6 py-2 rounded-full hover:bg-secondary transition-colors duration-300 shadow-sm hover:shadow-glow text-center">
+          View Resume
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="blog-index" class="py-24 relative">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <span
+          class="inline-block mb-4 text-primary font-medium uppercase text-sm bg-primary/10 px-4 py-1.5 rounded-full border border-primary/20">
+          Blog
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="gradient-text">My Thoughts</span><br>
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">on development, learning, and
+          other topics I'm passionate about</p>
+      </div>
+
+      <!-- Search and Filter Section -->
+      <div class="mb-12 bg-white dark:bg-dark/80 p-6 rounded-xl shadow-soft border border-gray-100 dark:border-gray-800"
+        data-aos="fade-up">
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Search Box -->
+          <div class="md:col-span-2">
+            <div class="relative">
+              <input type="text" id="blog-search" placeholder="Search posts..."
+                class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark focus:outline-none focus:ring-2 focus:ring-primary">
+              <button class="absolute right-3 top-3 text-gray-400 hover:text-primary">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category Filter -->
+          <div>
+            <select id="category-filter"
+              class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-dark focus:outline-none focus:ring-2 focus:ring-primary">
+              <option value="">All Categories</option>
+              <!-- Categories will be populated by JavaScript -->
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Posts Grid -->
+      <div id="blog-posts-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Posts will be loaded here by JavaScript -->
+      </div>
+
+      <!-- Pagination -->
+      <div id="pagination" class="flex justify-center gap-2">
+        <!-- Pagination will be generated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Resume Modal -->
+  <div id="resume-modal"
+    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center flex items-center justify-center">
+    <div class="bg-dark p-8 rounded-lg shadow-lg max-w-2xl w-full">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-semibold">Resume</h2>
+        <button id="close-resume-modal"
+          class="top-4 right-4 p-2 text-dark/70 dark:text-light/70 hover:text-red transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="resume-content">
+        <img src="images/main-resume.png" alt="Resume" style="max-width: 100%; height: auto;">
+      </div>
+      <div class="mt-4 flex justify-end">
+        <a href="images/main-resume2025.pdf" download
+          class="bg-primary text-light px-6 py-2 rounded-full hover:bg-secondary transition-colors duration-300 shadow-sm hover:shadow-glow">Download</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <section id="contact" class="py-24 relative">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col items-center mb-16" data-aos="fade-up">
+        <div class="inline-block px-4 py-1 bg-primary/10 rounded-full mb-3">
+          <span class="text-sm text-primary font-medium">CONTACT</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text">Get In Touch</h2>
+      </div>
+
+      <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+        <div class="flex justify-center gap-6">
+          <a href="mailto:noag29@hotmail.com"
+            class="bg-primary text-light px-8 py-3 mb-5 rounded-full hover:bg-secondary transition-all duration-300 shadow-soft hover:shadow-glow">
+            <i class="fas fa-envelope mr-2"></i>Send Email
+          </a>
+        </div>
+        <div class="flex justify-center gap-6 mt-8">
+          <a href="https://github.com/noahyanga" target="_blank"
+            class="text-white/70 hover:text-primary text-5xl transition-colors duration-300">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/noah-yanga-9654b61a5/" target="_blank"
+            class="text-white/70 hover:text-primary text-5xl transition-colors duration-300">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a id="bottom-resume-link" href="images/main-resume2025.pdf" download
+            class="text-white/70 hover:text-primary text-5xl transition-colors duration-300"><i
+              class="fa fa-address-card"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white/50 dark:bg-dark/50 border-t border-gray-100 dark:border-gray-800">
+    <div class="container mx-auto px-6 py-8 text-center">
+      <p class="text-sm text-dark/70 dark:text-light/70">
+        <span class="block mt-2">Built by Noah Yanga 🩵</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

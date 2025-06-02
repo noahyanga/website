@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy as a Fundamental Right | Noah Yanga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="../css/styles.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #60A5FA;
+      --primary-light: #93C5FD;
+      --primary-dark: #1E40AF;
+      --text-primary: #F9FAFB;
+      --text-secondary: #D1D5DB;
+      --bg-color: #0F172A;
+      --content-bg: #1E293B;
+      --content-border: #334155;
+      --accent: #7C3AED;
+      --highlight: rgba(96, 165, 250, 0.1);
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+
+    .essay-container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      position: relative;
+    }
+
+    .essay-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 3px 3px 0 0;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .essay-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, var(--text-primary), var(--text-secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .essay-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .essay-content {
+      font-size: 1.125rem;
+    }
+
+    .essay-content p {
+      margin-bottom: 1.75rem;
+    }
+
+    .essay-content h2 {
+      font-size: 1.75rem;
+      font-weight: 650;
+      margin: 3.5rem 0 1.5rem;
+      color: var(--primary-light);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .essay-content h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), transparent);
+      border-radius: 3px;
+    }
+
+    .essay-content a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border-bottom: 1px dotted var(--primary);
+    }
+
+    blockquote {
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background-color: var(--highlight);
+      border-radius: 0 6px 6px 0;
+      font-style: normal;
+    }
+
+    .key-quote {
+      background-color: rgba(124, 58, 237, 0.1);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: 0 8px 8px 0;
+      margin: 2.5rem 0;
+    }
+
+    .key-quote::before {
+      content: "🔑";
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--content-border), transparent);
+      margin: 3.5rem 0;
+    }
+
+    ul,
+    ol {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "•";
+      color: var(--primary);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    @media (max-width: 768px) {
+      .essay-container {
+        padding: 2rem 1.25rem;
+      }
+
+      .essay-title {
+        font-size: 2rem;
+      }
+
+      .essay-content h2 {
+        font-size: 1.5rem;
+        margin: 3rem 0 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="essay-container">
+    <a href="../blog.html" class="back-link">← Back to all posts</a>
+
+    <h1 class="essay-title">Privacy as a Fundamental Right</h1>
+
+    <div class="essay-meta">
+      <span>Published on July 2, 2024</span>
+      <span>•</span>
+      <span>6 min read</span>
+    </div>
+
+    <div class="essay-content">
+      <p>Privacy is not about hiding something because you have something to hide. It's about <strong>the right to not
+          have everything out in the open</strong> even though I might not have anything to hide. It's about the right
+        to choose what one is willing to disclose to the public.</p>
+
+      <ul>
+        <li>Privacy is a right that needs not be preceded by circumstances where you need to hide something</li>
+        <li>Just as free speech doesn't require that you have something important to say</li>
+        <li>There's no contradiction between self-expression and maintaining privacy</li>
+      </ul>
+
+      <div class="key-quote">
+        "Arguing that you don't care about the right to privacy because you have nothing to hide is no different than
+        saying you don't care about free speech because you have nothing to say."
+      </div>
+
+      <h2>The Free Speech Analogy</h2>
+
+      <p>The analogy establishes that you wouldn't waive your right to free speech just because you have nothing
+        "important" to say. This highlights the double standard of saying "I don't care about privacy, I have nothing to
+        hide."</p>
+
+      <h2>The Security Reality</h2>
+
+      <p>Any backdoor that exists for government agencies or manufacturers is also a backdoor for attackers:</p>
+
+      <ul>
+        <li>Companies and agencies <strong>have been hacked</strong> before</li>
+        <li>Hackers <strong>have stolen data</strong> from them before</li>
+        <li>Every time you trust a company with data, you increase chances of leaks</li>
+      </ul>
+
+      <blockquote>
+        "Boring people are the juiciest targets for identity thieves. Imagine, a great credit score, steady income, and
+        very few bills. Whew! Bring on the mortgages!"
+      </blockquote>
+
+      <h2>The Flawed Assumption</h2>
+
+      <p>Arguments against privacy assume that data collectors can be implicitly trusted:</p>
+
+      <ul>
+        <li>Even "boring" data can be used against you (identity theft being just one example)</li>
+        <li>Security breaches happen to all organizations - no company is completely secure</li>
+        <li>Once data is leaked, it's out there forever</li>
+      </ul>
+
+      <h2>Gray Security and Threat Modeling</h2>
+
+      <p>There's an important paper I reference titled <em>Gray Security</em> that challenges binary security thinking:
+      </p>
+
+      <ul>
+        <li>Viewing security as black/white hinders actual protection</li>
+        <li>Threat modeling is often overlooked in security education</li>
+        <li>This has bred a culture of "X is secure, Y is not" without nuance</li>
+        <li>Even NIST and NSA documents now address this security-usability gap</li>
+      </ul>
+
+      <h2>The Ownership Perspective</h2>
+
+      <p>Privacy is fundamentally about ownership of information:</p>
+
+      <ul>
+        <li>Even as an honest employee, forced transparency removes your choice to be honest</li>
+        <li>The virtue of honesty is taken from you without compensation</li>
+        <li>Criminals make a choice, law-abiding citizens make another - transparency removes this choice</li>
+      </ul>
+
+      <blockquote>
+        "It does not matter whether I'm a criminal or not. What matters is that privacy is my property, and if people
+        take it away from me, I try to smack them, because just as you fight for your stuff, I do for mine."
+      </blockquote>
+
+      <h2>Final Thought</h2>
+
+      <p>Privacy isn't about hiding - it's about maintaining control over your personal boundaries and information. In
+        an increasingly transparent world, the right to choose what we share becomes ever more precious.</p>
+    </div>
+  </div>
+</body>
+
+</html>
