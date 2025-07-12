@@ -4,444 +4,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Craftsman's Guide to Improving Programming Skills | Noah Yanga</title>
+  <title>My Guide to Git Gud At Programming | Noah Yanga</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="../css/styles.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #60A5FA;
-      --primary-light: #93C5FD;
-      --primary-dark: #1E40AF;
-      --text-primary: #F9FAFB;
-      --text-secondary: #D1D5DB;
-      --bg-color: #0F172A;
-      --content-bg: #1E293B;
-      --content-border: #334155;
-      --code-bg: #334155;
-      --accent: #7C3AED;
-      --highlight: rgba(96, 165, 250, 0.1);
-    }
-
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-primary);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.8;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-
-    .essay-container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      position: relative;
-    }
-
-    .essay-container::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      border-radius: 3px 3px 0 0;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--text-secondary);
-      margin-bottom: 2rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    .essay-title {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      line-height: 1.3;
-      letter-spacing: -0.5px;
-      background: linear-gradient(90deg, var(--text-primary), var(--text-secondary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .essay-meta {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-      font-size: 0.95rem;
-      color: var(--text-secondary);
-    }
-
-    .essay-content {
-      font-size: 1.125rem;
-    }
-
-    .essay-content p {
-      margin-bottom: 1.75rem;
-    }
-
-    .essay-content h2 {
-      font-size: 1.75rem;
-      font-weight: 650;
-      margin: 3.5rem 0 1.5rem;
-      color: var(--primary-light);
-      position: relative;
-      padding-bottom: 0.5rem;
-    }
-
-    .essay-content h2::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary), transparent);
-      border-radius: 3px;
-    }
-
-    .essay-content h3 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin: 2.5rem 0 1.25rem;
-    }
-
-    blockquote {
-      border-left: 4px solid var(--primary);
-      padding: 1rem 1.5rem;
-      margin: 2rem 0;
-      background-color: var(--highlight);
-      border-radius: 0 6px 6px 0;
-      font-style: normal;
-    }
-
-    hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--content-border), transparent);
-      margin: 3.5rem 0;
-    }
-
-    ul,
-    ol {
-      margin-bottom: 2rem;
-      padding-left: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.75rem;
-      position: relative;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2.5rem 0;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    th,
-    td {
-      padding: 1rem;
-      text-align: left;
-      border: 1px solid var(--content-border);
-    }
-
-    th {
-      background-color: var(--primary-dark);
-      color: white;
-      font-weight: 600;
-    }
-
-    tr:nth-child(even) {
-      background-color: rgba(30, 64, 175, 0.1);
-    }
-
-    .dos-donts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .dos,
-    .donts {
-      padding: 1.5rem;
-      border-radius: 8px;
-    }
-
-    .dos {
-      background-color: rgba(16, 185, 129, 0.1);
-      border-left: 4px solid #10B981;
-    }
-
-    .donts {
-      background-color: rgba(239, 68, 68, 0.1);
-      border-left: 4px solid #EF4444;
-    }
-
-    .dos h3,
-    .donts h3 {
-      margin-top: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .dos h3::before {
-      content: "✓";
-      color: #10B981;
-    }
-
-    .donts h3::before {
-      content: "✗";
-      color: #EF4444;
-    }
-
-    .further-reading {
-      display: flex;
-      gap: 1rem;
-      margin-top: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .further-reading a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.25rem;
-      background-color: var(--primary-dark);
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: transform 0.2s ease, background-color 0.2s ease;
-    }
-
-    @media (max-width: 768px) {
-      .essay-container {
-        padding: 2rem 1.25rem;
-      }
-
-      .essay-title {
-        font-size: 2rem;
-      }
-
-      .essay-content h2 {
-        font-size: 1.5rem;
-        margin: 3rem 0 1.25rem;
-      }
-
-      .dos-donts {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <div class="essay-container">
     <a href="../blog.html" class="back-link">← Back to all posts</a>
 
-    <h1 class="essay-title">The Craftsman's Guide to Improving Programming Skills</h1>
+    <h1 class="essay-title">My Guide to Git Gud At Programming</h1>
 
     <div class="essay-meta">
       <span>Published on June 30, 2024</span>
-      <span>•</span>
-      <span>8 min read</span>
     </div>
 
     <div class="essay-content">
-      <h2>Programming is a Trade, Not Just Theory</h2>
+      <p>When I first started programming, I made the same mistake many beginners do - I spent months watching tutorials
+        without building anything substantial. It wasn't until I started working on real projects that I truly began to
+        learn. Programming can't be mastered through passive consumption any more than carpentry can be learned by only
+        reading woodworking books.</p>
 
-      <p>You wouldn't expect to become a skilled carpenter by only reading books—you'd need to build things, make
-        mistakes, and refine your technique. The same applies to programming.</p>
+      <h2>My Breakthrough Moment</h2>
+      <p>I remember the first time I stepped away from tutorials and tried to build something original. It was a simple
+        weather app, and I struggled through every step. What surprised me wasn't how much I didn't know, but how much I
+        learned by working through those struggles. The tutorials had given me false confidence - real learning happened
+        when I had to solve my own problems.</p>
 
-      <ul>
-        <li><strong>Hands-on experience is irreplaceable.</strong></li>
-        <li><strong>Debugging broken code teaches more than perfect tutorials.</strong></li>
-        <li><strong>Real learning happens when you ship projects, not just complete courses.</strong></li>
-      </ul>
+      <p>Now when I'm learning something new, I go straight to the documentation after getting the basics. I've found
+        that wrestling with official docs, while harder at first, gives me a deeper understanding than any tutorial
+        could.</p>
 
-      <blockquote>
-        "Programming isn't about memorizing syntax—it's about solving problems with code."
-      </blockquote>
+      <h2>How I Approach Problems Now</h2>
+      <p>Early on, I'd often get stuck staring at a blank editor, unsure where to start. Over time, I developed a method
+        that works for me: break everything down into tiny pieces. When I'm facing a complex feature, I write comments
+        outlining each step before writing any code. This helps me see the problem clearly and identify which parts I
+        need to research.</p>
 
-      <hr>
+      <p>I also regularly study other developers' code. When I find an elegant solution to a problem I've struggled
+        with, I'll recreate it myself to understand the thinking behind it. This has taught me more about good design
+        than any textbook.</p>
 
-      <h2>1. Learn Just Enough (But Keep Learning)</h2>
+      <h2>My Project Philosophy</h2>
+      <p>I used to abandon projects when they got messy or I hit a roadblock. Now I force myself to push through to
+        completion, even if the code isn't perfect. Some of my most educational projects have been the ugliest ones -
+        the ones where I had to duct-tape solutions together just to make things work.</p>
 
-      <h3>Avoid Tutorial Hell</h3>
-      <ul>
-        <li><strong>Courses have diminishing returns</strong> – At some point, you must build on your own.</li>
-        <li><strong>Don't over-optimize learning</strong> – Take notes, but don't drown in them.</li>
-        <li><strong>Drop irrelevant courses</strong> – If it doesn't help your current project, move on.</li>
-      </ul>
+      <p>These days, I deliberately keep my projects small and focused. I've built dozens of simple tools that solve
+        actual problems I have, and each one has taught me something valuable. A script that organizes my downloads
+        folder gave me more practical experience than any tutorial project ever did.</p>
 
-      <h3>How to Self-Teach Effectively</h3>
-      <ul>
-        <li><strong>Docs > Tutorials</strong> – Learn to read official documentation.</li>
-        <li><strong>Case-by-case learning</strong> – Study only what you need for your next feature.</li>
-        <li><strong>Experiment & break things</strong> – The best lessons come from fixing mistakes.</li>
-      </ul>
+      <h2>My Relationship With Code Quality</h2>
+      <p>Looking back at my old code makes me cringe, but that's how I know I've improved. I used to obsess over writing
+        perfect code from the start. Now I focus on making it work first, then refining. When I revisit old projects, I
+        can immediately spot where I'd make different decisions today - and sometimes I'll refactor them just for
+        practice.</p>
 
-      <hr>
+      <h2>Debugging Lessons</h2>
+      <p>I used to hate debugging - it felt like a waste of time when I could be writing new code. My perspective
+        changed when I started viewing errors as learning opportunities. Now when something breaks, I try to understand
+        why before rushing to fix it. Some of my deepest insights have come from debugging sessions where I discovered
+        how things actually work under the hood.</p>
 
-      <h2>2. Improve Problem-Solving Skills</h2>
+      <p>Explaining my code out loud to an imaginary listener (or sometimes a real one) has saved me countless hours.
+        There's something about verbalizing the problem that makes solutions obvious.</p>
 
-      <h3>Break Problems Down</h3>
-      <ol>
-        <li><strong>Deconstruct</strong> – Split the problem into smaller steps.</li>
-        <li><strong>Research</strong> – Look up how to solve each step.</li>
-        <li><strong>Reassemble</strong> – Combine solutions into working code.</li>
-      </ol>
+      <h2>What I Wish I'd Learned Sooner</h2>
+      <p>I avoided Git for far too long because it seemed complicated. Once I committed to learning it properly, I
+        kicked myself for waiting. Version control has saved me so many times that I can't imagine working without it
+        now.</p>
 
-      <h3>Reverse Engineering</h3>
-      <ul>
-        <li>Find existing solutions, then dissect how they work.</li>
-        <li>Modify them to fit your needs—this builds intuition.</li>
-      </ul>
+      <p>The same goes for command line tools and basic infrastructure knowledge. These supporting skills have proven
+        just as valuable as writing code itself. I make time to learn them even when they don't seem immediately
+        relevant to whatever I'm building.</p>
 
-      <hr>
+      <h2>My Current Approach</h2>
+      <p>These days, I learn by doing. When I want to pick up a new technology, I find or create a project that forces
+        me to use it. I still consult tutorials and documentation, but they're supplements to hands-on practice rather
+        than the main event.</p>
 
-      <h2>3. Build Projects (No Matter How Small)</h2>
+      <p>What surprised me most about becoming a better programmer is how much it improved my ability to think
+        systematically. The skills transfer to all sorts of problem-solving situations outside coding. That's been the
+        most rewarding part of the journey.</p>
 
-      <h3>Prioritize Finishing Over Perfection</h3>
-      <ul>
-        <li><strong>A working prototype > an unfinished masterpiece.</strong></li>
-        <li><strong>Small projects compound into deep expertise.</strong></li>
-      </ul>
-
-      <h3>Project Ideas to Grow Skills</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Skill</th>
-            <th>Project Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>CLI Tools</strong></td>
-            <td>A script that renames files</td>
-          </tr>
-          <tr>
-            <td><strong>APIs</strong></td>
-            <td>Weather data fetcher</td>
-          </tr>
-          <tr>
-            <td><strong>UI/UX</strong></td>
-            <td>Todo app with drag & drop</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <blockquote>
-        "The best way to learn programming is to program."
-      </blockquote>
-
-      <hr>
-
-      <h2>4. Write Clean(er) Code</h2>
-
-      <div class="dos-donts">
-        <div class="dos">
-          <h3>DOs</h3>
-          <ul>
-            <li><strong>Use clear variable names</strong> – Avoid <code>list</code>, <code>str</code>,
-              <code>iter</code>.
-            </li>
-            <li><strong>Limit nesting</strong> – If a function has >3 layers, split it.</li>
-            <li><strong>Follow community conventions</strong> – Use linters/formatters.</li>
-          </ul>
-        </div>
-
-        <div class="donts">
-          <h3>DON'Ts</h3>
-          <ul>
-            <li><strong>Over-abstract early</strong> – Solve the problem first, then refactor.</li>
-            <li><strong>Premature DRY</strong> – Duplication is better than wrong abstraction.</li>
-            <li><strong>"Clever" code</strong> – Simple > clever. Future-you will thank you.</li>
-          </ul>
-        </div>
-      </div>
-
-      <hr>
-
-      <h2>5. Debug Like a Detective</h2>
-
-      <h3>Rubber Duck Debugging</h3>
-      <ul>
-        <li>Explain the problem aloud (even to a rubber duck).</li>
-        <li>Often, the solution appears mid-explanation.</li>
-      </ul>
-
-      <h3>Mindset Shift</h3>
-      <ul>
-        <li><strong>Bugs are logical, not magical.</strong></li>
-        <li><strong>Reproduce errors</strong> – If you can't, you don't understand them.</li>
-      </ul>
-
-      <blockquote>
-        "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly
-        as possible, you are, by definition, not smart enough to debug it."<br>
-        — <em>Brian Kernighan</em>
-      </blockquote>
-
-      <hr>
-
-      <h2>6. Essential Skills Beyond Code</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Skill</th>
-            <th>Why It Matters</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Git</strong></td>
-            <td>Version control is non-negotiable.</td>
-          </tr>
-          <tr>
-            <td><strong>Basic SQL</strong></td>
-            <td>Data is everywhere.</td>
-          </tr>
-          <tr>
-            <td><strong>CLI Fluency</strong></td>
-            <td>Faster than GUI for many tasks.</td>
-          </tr>
-          <tr>
-            <td><strong>Docker Basics</strong></td>
-            <td>Reproducible environments.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <hr>
-
-      <h2>Final Thought: Just Build Things</h2>
-
-      <p>The fastest way to improve isn't more theory—it's consistent practice, debugging, and iteration.</p>
-
-      <div class="further-reading">
-        <a href="https://www.algorist.com/" target="_blank">
-          The Algorithm Design Manual
-        </a>
-        <a href="https://guides.github.com/" target="_blank">
-          GitHub's Guides
-        </a>
-      </div>
+      <p>If I could give my beginner self one piece of advice, it would be this: Stop preparing to program and just
+        program. The tutorials will always be there when you need them, but real growth happens when you're building
+        things yourself, making mistakes, and figuring out solutions.</p>
     </div>
   </div>
 </body>

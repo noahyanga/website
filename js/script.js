@@ -9,12 +9,52 @@ AOS.init({
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Mobile Menu Toggle
+// Mobile Menu Toggle - Enhanced Version
 const mobileMenu = document.querySelector('.mobile-menu');
 const navToggle = document.querySelector('.nav-toggle');
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const topBar = navToggle.querySelector('span > span:nth-child(1)');
+const middleBar = navToggle.querySelector('span > span:nth-child(2)');
+const bottomBar = navToggle.querySelector('span > span:nth-child(3)');
 
-navToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+function toggleMobileMenu() {
+  const isHidden = mobileMenu.classList.toggle('hidden');
+
+  // Update ARIA attributes
+  mobileMenuButton.setAttribute('aria-expanded', !isHidden);
+
+  // Animate hamburger icon
+  if (isHidden) {
+    topBar.style.transform = '';
+    middleBar.style.opacity = '';
+    bottomBar.style.transform = '';
+  } else {
+    topBar.style.transform = 'rotate(45deg) translate(5px, 5px)';
+    middleBar.style.opacity = '0';
+    bottomBar.style.transform = 'rotate(-45deg) translate(5px, -5px)';
+  }
+
+  // Toggle body scroll
+  document.body.classList.toggle('overflow-hidden', !isHidden);
+}
+
+navToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleMobileMenu();
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && !navToggle.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+    toggleMobileMenu();
+  }
+});
+
+// Close menu when clicking nav links (except resume button)
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  if (!link.classList.contains('modal-trigger')) {
+    link.addEventListener('click', toggleMobileMenu);
+  }
 });
 
 // Back to Top Button
@@ -40,12 +80,16 @@ backToTop.addEventListener('click', (e) => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
+// Particle Animation System
 document.addEventListener('DOMContentLoaded', () => {
   const liquidBlob = document.querySelector('.liquid-blob');
   const particleStorm = document.querySelector('.particle-storm');
@@ -61,7 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
     particle.style.left = `${Math.random() * 100}%`;
     particle.style.top = `${Math.random() * 100}%`;
     particleStorm.appendChild(particle);
-    particles.push(particle);
+    particles.push({
+      element: particle,
+      offset: Math.random() * Math.PI * 3
+    });
   }
 
   // Mouse move handler
@@ -70,31 +117,31 @@ document.addEventListener('DOMContentLoaded', () => {
     mouseY = e.clientY;
 
     // Update light trail
-    lightTrail.style.left = `${mouseX - 50}px`;
-    lightTrail.style.top = `${mouseY - 50}px`;
-    lightTrail.style.opacity = '0.4';
-    setTimeout(() => lightTrail.style.opacity = '0', 50);
+    if (lightTrail) {
+      lightTrail.style.left = `${mouseX - 1}px`;
+      lightTrail.style.top = `${mouseY - 1}px`;
+      lightTrail.style.opacity = '0.4';
+      setTimeout(() => lightTrail.style.opacity = '0', 50);
+    }
   });
 
   // Animation loop
   function animate() {
-    time += 0.01; // Increment time for oscillation
+    time += 0.01;
 
     // Move liquid blob
-    const blobX = mouseX - window.innerWidth / 2;
-    const blobY = mouseY - window.innerHeight / 2;
-    liquidBlob.style.transform = `
-    translate(${blobX * 100}px, ${blobY * 100}px)
-    rotate(${blobX * 0.9}deg)
-  `;
+    if (liquidBlob) {
+      const blobX = mouseX - window.innerWidth / 5;
+      const blobY = mouseY - window.innerHeight / 5;
+      liquidBlob.style.transform = `
+        translate(${blobX * 0.05}px, ${blobY * 0.01}px)
+        rotate(${blobX * 0.9}deg)
+      `;
+    }
 
     // Animate particles
-    particles.forEach((particle, index) => {
-      if (!particle.offset) {
-        particle.offset = Math.random() * Math.PI * 2; // Assign random offset
-      }
-
-      const rect = particle.getBoundingClientRect();
+    particles.forEach(({ element, offset }) => {
+      const rect = element.getBoundingClientRect();
       const particleX = rect.left + rect.width / 2;
       const particleY = rect.top + rect.height / 2;
 
@@ -102,27 +149,24 @@ document.addEventListener('DOMContentLoaded', () => {
       const deltaY = mouseY - particleY;
       const distance = Math.sqrt(deltaX ** 1.2 + deltaY ** 1.2);
 
-      // Slight oscillation in position
-      const waveX = Math.sin(time + particle.offset) * 100; // Small movement in X
-      const waveY = Math.cos(time + particle.offset) * 100; // Small movement in Y
+      const waveX = Math.sin(time + offset) * 100;
+      const waveY = Math.cos(time + offset) * 100;
 
       if (distance < 300) {
         const angle = Math.atan2(deltaY, deltaX);
         const force = 300 / distance;
 
-        particle.style.transform = `
-        translate(${waveX + Math.cos(angle) * -force}px, 
-                  ${waveY + Math.sin(angle) * -force}px)
-        scale(${1 + force / 20})
-      `;
-        particle.style.background = `rgba(16, 185, 129,${0.8 - force / 50})`;
+        element.style.transform = `
+          translate(${waveX + Math.cos(angle) * -force}px, 
+                    ${waveY + Math.sin(angle) * -force}px)
+          scale(${1 + force / 20})
+        `;
+        element.style.background = `rgba(16, 185, 129,${0.8 - force / 50})`;
       } else {
-        particle.style.transform = `translate(${waveX}px, ${waveY}px) scale(1)`;
-        particle.style.background = 'rgba(2,114,182,0.8)';
+        element.style.transform = `translate(${waveX}px, ${waveY}px) scale(1)`;
+        element.style.background = 'rgba(2,114,182,0.8)';
       }
     });
-
-
 
     requestAnimationFrame(animate);
   }
@@ -130,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
   animate();
 });
 
+// Modal System
 document.addEventListener('DOMContentLoaded', () => {
   const projectModal = document.getElementById('project-modal');
   const closeProjectModal = document.getElementById('close-project-modal');
@@ -139,37 +184,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const resumeModal = document.getElementById('resume-modal');
   const bottomLink = document.getElementById('bottom-resume-link');
 
-  bottomLink.addEventListener('click', function(event) {
-    event.preventDefault();
-    resumeModal.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-  });
-
-  // Attach closeProjectModal listener
-  if (closeProjectModal) {
-    closeProjectModal.addEventListener('click', () => {
-      projectModal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden'); // Remove overflow-hidden
+  function closeAllModals() {
+    [projectModal, resumeModal].forEach(modal => {
+      if (modal) modal.classList.add('hidden');
     });
+    document.body.classList.remove('overflow-hidden');
   }
 
-  // Attach closeResumeModal listener
-  if (closeResumeModal) {
-    closeResumeModal.addEventListener('click', () => {
-      resumeModal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden'); // Remove overflow-hidden
-    });
-  }
-
-  // Attach modal background click listener for project modal
-  if (projectModal) {
-    projectModal.addEventListener('click', (event) => {
-      if (event.target === projectModal) {
-        projectModal.classList.add('hidden');
-        document.body.classList.remove('overflow-hidden'); // Remove overflow-hidden
-      }
-    });
-  }
+  // Project Modal
   document.querySelectorAll('[data-project]').forEach(card => {
     card.addEventListener('click', (e) => {
       if (e.target.tagName === 'A') return;
@@ -189,10 +211,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const techStack = document.getElementById('modal-tech');
       techStack.innerHTML = details.tech.map(tech => `
-                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
-                    ${tech}
-                </span> 
-            `).join('');
+        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">
+          ${tech}
+        </span> 
+      `).join('');
 
       projectModal.classList.remove('hidden');
       document.body.classList.add('overflow-hidden');
@@ -201,34 +223,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function populateList(id, items) {
     const list = document.getElementById(id);
-    list.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+    if (list) {
+      list.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+    }
   }
 
-  // Close modal on ESC key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      projectModal.classList.add('hidden');
-      resumeModal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden'); // Remove overflow-hidden
+  // Resume Modal
+  [resumeModalButton, mobileResumeModalButton, bottomLink].forEach(button => {
+    if (button) {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        resumeModal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        if (button === mobileResumeModalButton) {
+          toggleMobileMenu();
+        }
+      });
     }
   });
 
-  // Resume Modal
-  resumeModalButton.addEventListener('click', () => {
-    resumeModal.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
+  // Close modals
+  [closeProjectModal, closeResumeModal].forEach(button => {
+    if (button) {
+      button.addEventListener('click', closeAllModals);
+    }
   });
 
-  mobileResumeModalButton.addEventListener('click', () => {
-    resumeModal.classList.remove('hidden');
-    mobileMenu.classList.add('hidden');
-    document.body.classList.add('overflow-hidden');
+  // Close modals when clicking outside
+  [projectModal, resumeModal].forEach(modal => {
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeAllModals();
+        }
+      });
+    }
   });
 
-  window.addEventListener('click', (event) => {
-    if (event.target === resumeModal) {
-      resumeModal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
+  // Close modals on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllModals();
     }
   });
 });
