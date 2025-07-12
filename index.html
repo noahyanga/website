@@ -64,14 +64,14 @@
         </button>
       </div>
       <button class="nav-toggle md:hidden p-2" aria-label="Toggle navigation">
-        <div class="w-6 h-6 relative">
+        <span class="w-6 h-6 relative">
           <span
             class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-1 dark:bg-light"></span>
           <span
             class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-3 dark:bg-light"></span>
           <span
             class="block absolute w-full h-0.5 bg-dark rounded-full transition-all duration-300 top-5 dark:bg-light"></span>
-        </div>
+        </span>
       </button>
     </div>
 
@@ -177,10 +177,9 @@
               </div>
               <div>
                 <h3 class="text-xl font-semibold">Education</h3>
-                <p class="text-sm text-dark/70 dark:text-light/70">
-                  Business Information Technology @ RRC Polytechnic<br>
+                <p class="text-sm text-dark/70 dark:text-light/70"></p>
+                Business Information Technology @ RRC Polytechnic<br>
                 <p class="text-primary">2022-2024</p>
-                </p>
               </div>
             </div>
           </div>
@@ -342,16 +341,18 @@
             </div>
             <div class="flex justify-between items-center">
               <div class="flex space-x-4">
-                <a href="https://github.com/noahyanga/prairie-plants" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+
+                <a href="https://github.com/noahyanga/prairie-plants" target="_blank" rel="noopener noreferrer"
+                  class="text-primary hover:text-secondary transition-colors duration-300">
                   <i class="fab fa-github"></i>
                 </a>
-                <a href="https://prairie-plants.fly.dev/" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+
+                <a href="https://prairie-plants.fly.dev/" target="_blank" rel="noopener noreferrer"
+                  class="text-primary hover:text-secondary transition-colors duration-300">
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
-              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+              <button class="text-primary hover:text-secondary transition-colors project-details-button">
                 <i class="fas fa-ellipsis-h"></i>
               </button>
             </div>
@@ -396,16 +397,16 @@
             <div class="flex justify-between items-center">
               <div class="flex space-x-4">
                 <a href="https://github.com/noahyanga/gesscam" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  class="text-primary hover:text-secondary transition-colors duration-300" rel="noopener noreferrer">
                   <i class="fab fa-github"></i>
                 </a>
                 <a href="https://gesscam.vercel.app/home" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  class="text-primary hover:text-secondary transition-colors duration-300" rel="noopener noreferrer">
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
-              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
-                <i class="fas fa-ellipsis-h"></i>
+              <button class="text-primary hover:text-secondary transition-colors project-details-button"> <i
+                  class="fas fa-ellipsis-h"></i>
               </button>
             </div>
           </div>
@@ -448,11 +449,11 @@
             <div class="flex justify-between items-center">
               <div class="flex space-x-4">
                 <a href="https://github.com/noahyanga/weather-app" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  class="text-primary hover:text-secondary transition-colors duration-300" rel="noopener noreferrer">
                   <i class="fab fa-github"></i>
                 </a>
               </div>
-              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+              <button class="text-primary hover:text-secondary transition-colors project-details-button">
                 <i class="fas fa-ellipsis-h"></i>
               </button>
             </div>
@@ -493,17 +494,19 @@
             <div class="flex justify-between items-center">
               <div class="flex space-x-4">
                 <a href="https://github.com/noahyanga/react-todo" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  class="text-primary hover:text-secondary transition-colors duration-300">
                   <i class="fab fa-github"></i>
                 </a>
                 <a href="https://react-productivity.netlify.app/" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  class="text-primary hover:text-secondary transition-colors duration-300" onclick="stopClick(event)">
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
-              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+              <button class="text-primary hover:text-secondary transition-colors" onclick="toggleDetails(event)">
                 <i class="fas fa-ellipsis-h"></i>
               </button>
+
+
             </div>
           </div>
         </div>
@@ -545,15 +548,15 @@
             <div class="flex justify-between items-center">
               <div class="flex space-x-4">
                 <a href="https://github.com/noahyanga/website" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  class="text-primary hover:text-secondary transition-colors duration-300">
                   <i class="fab fa-github"></i>
                 </a>
                 <a href="https://noahyanga.netlify.app/" target="_blank"
-                  class="text-primary hover:text-secondary transition-colors duration-300" @click.stop>
+                  class="text-primary hover:text-secondary transition-colors duration-300">
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
-              <button class="text-primary hover:text-secondary transition-colors" @click.stop="toggleDetails($event)">
+              <button class="text-primary hover:text-secondary transition-colors project-details-button">
                 <i class="fas fa-ellipsis-h"></i>
               </button>
             </div>
@@ -601,13 +604,13 @@
 
         <div class="p-6">
           <div class="flex justify-between items-start mb-6">
-            <h3 class="text-2xl font-bold" id="modal-title"></h3>
+            <h3 class="text-2xl font-bold" id="modal-title">Project Title</h3>
 
           </div>
 
           <div class="grid gap-6">
             <div class="aspect-video bg-dark/5 rounded-xl overflow-hidden">
-              <img id="modal-image" class="w-full h-full object-contain" />
+              <img id="modal-image" src="about:blank" class="w-full h-full object-contain" alt="Project Image" />
             </div>
 
             <div>
