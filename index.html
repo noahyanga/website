@@ -166,9 +166,9 @@
         </h2>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-4 max-w-7xl mx-auto">
+        <!-- First column: Education and About Me stacked -->
         <div class="space-y-8" data-aos="fade-right">
-          <!-- Academic Journey div -->
           <div
             class="bg-white dark:bg-dark/80 p-8 rounded-3xl shadow-soft-xl border border-gray-100 dark:border-gray-800">
             <div class="flex items-start gap-4">
@@ -176,70 +176,67 @@
                 <i class="fas fa-graduation-cap text-3xl text-primary"></i>
               </div>
               <div>
-                <h3 class="text-xl font-semibold">Education</h3>
-                <p class="text-sm text-dark/70 dark:text-light/70"></p>
-                Business Information Technology @ RRC Polytechnic<br>
-                <p class="text-primary">2022-2024</p>
+                <h3 class="text-2xl font-semibold">Education</h3>
+                <p class="text-xl text-dark/70 dark:text-light/70">
+                  Business Information Technology @ RRC Polytechnic<br>
+                  <span class="text-primary text-lg">2022-2024</span>
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="space-y-8" data-aos="fade-up">
-            <!-- About Me div -->
-            <div
-              class="bg-white dark:bg-dark/80 p-8 rounded-3xl shadow-soft-xl border border-gray-100 dark:border-gray-800">
-              <h3 class="text-xl font-semibold mb-4">About Me</h3>
-              <p class="text-dark/70 dark:text-light/70">
-                My journey into development began with playing lots of for flash games on websites like Newgrounds and
-                Armor
-                Games. The design and aesthetic appeal sparked an interest in me that eventually led me to explore
-                initially general tech
-                related things, and eventually I became drawn to design and development.
-              </p>
+          <div
+            class="bg-white dark:bg-dark/80 p-8 rounded-3xl shadow-soft-xl border border-gray-100 dark:border-gray-800"
+            data-aos="fade-up">
+            <h3 class="text-xl font-semibold mb-4">About Me</h3>
+            <p class="text-dark/70 dark:text-light/70 text-md">
+              My journey into development began with playing lots of flash games on websites like Newgrounds and Armor
+              Games.
+              The design and aesthetic appeal sparked an interest in me that eventually led me to explore initially
+              general
+              tech related things, and eventually I became drawn to design and development.
+            </p>
+          </div>
+        </div>
+
+        <!-- Second column: Tech Radar -->
+        <div class="bg-white dark:bg-dark/80 p-8 rounded-3xl shadow-soft-xl border border-gray-100 dark:border-gray-800"
+          data-aos="fade-up">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl">
+              <div class="text-primary font-medium mb-2 text-2xl">Languages I Use</div>
+              <ul class="space-y-2 text-lg list-disc list-inside">
+                <li class="flex items-center gap-2"><i class="fab fa-react text-primary"></i>React</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-gem text-primary"></i>Ruby on Rails</li>
+                <li class="flex items-center gap-2"><i class="fa-brands fa-css text-primary"></i>HTML/CSS</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-mug-hot text-primary"></i>JavaScript</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-newspaper text-primary"></i>PHP</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-staff-snake text-primary"></i>Python</li>
+              </ul>
             </div>
-
-            <!-- Tech Radar div -->
-            <div
-              class="bg-white dark:bg-dark/80 p-8 rounded-3xl shadow-soft-xl border border-gray-100 dark:border-gray-800">
-              <div class="grid grid-cols-2 gap-4">
-                <div class="p-4 rounded-xl">
-                  <div class="text-primary font-medium mb-2 text-xl">Languages</div>
-                  <ul class="space-y-2 text-sm list-disc list-inside">
-                    <li class="flex items-center gap-2"><i class="fab fa-react text-primary"></i>React</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-gem text-primary"></i>Ruby on Rails</li>
-                    <li class="flex items-center gap-2"><i class="fa-brands fa-css text-primary"></i>HTML/CSS</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-mug-hot text-primary"></i>JavaScript</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-newspaper text-primary"></i>PHP</li>
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-staff-snake text-primary"></i>Python</li>
-                  </ul>
-                </div>
-                <div class="p-4 rounded-xl">
-                  <div class="text-accent font-medium mb-2 text-xl">Currently Learning</div>
-                  <ul class="space-y-2 text-sm">
-                    <li class="flex items-center gap-2"><i class="fas fa-code text-accent"></i>
-                      Node.js</li>
-                    <li class="flex items-center gap-2"><i class="fab fa-react text-accent"></i>React Native
-                    </li>
-
-                    <li class="flex items-center gap-2"><i class="fa-solid fa-server text-accent"></i> Next.js
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div class="p-4 rounded-xl">
+              <div class="text-accent font-medium mb-2 text-2xl">Currently Learning</div>
+              <ul class="space-y-2 text-lg">
+                <li class="flex items-center gap-2"><i class="fas fa-code text-accent"></i>Node.js</li>
+                <li class="flex items-center gap-2"><i class="fab fa-react text-accent"></i>React Native</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-server text-accent"></i>Next.js</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="mt-16 text-center" data-aos="fade-up">
-        <a href="#projects"
-          class="group inline-flex items-center gap-2 bg-primary text-light px-8 py-3.5 rounded-full hover:bg-secondary transition-all duration-300 shadow-glow hover:shadow-glow-lg">
-          <span>Explore My Work</span>
-          <i class="fas fa-arrow-down text-sm transform group-hover:translate-y-1 transition-transform"></i>
-        </a>
-      </div>
+    <div class="mt-16 text-center" data-aos="fade-up">
+      <a href="#projects"
+        class="group inline-flex items-center gap-2 bg-primary text-light px-8 py-3.5 rounded-full hover:bg-secondary transition-all duration-300 shadow-glow hover:shadow-glow-lg">
+        <span>Explore My Work</span>
+        <i class="fas fa-arrow-down text-sm transform group-hover:translate-y-1 transition-transform"></i>
+      </a>
     </div>
   </section>
+
+
 
   <section id="experience" class="py-24 relative">
     <div class="container mx-auto px-6">
